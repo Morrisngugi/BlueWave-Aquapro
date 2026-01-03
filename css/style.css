@@ -11,12 +11,17 @@
 
 /* Base Styles */
 body {
-    padding-top: 76px;
+    padding-top: 100px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
 }
 
 /* Navigation */
+.navbar {
+    padding-top: 1px !important;
+    padding-bottom: 0 !important;
+}
+
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: 700;
