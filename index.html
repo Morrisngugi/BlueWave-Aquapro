@@ -8,6 +8,12 @@
     <meta name="keywords" content="cleaning services Meru, carpet cleaning Chuka, sofa cleaning Kenya, car interior cleaning, mattress cleaning, BlueWave Aquapro, professional cleaning Meru">
     <meta name="author" content="BlueWave Aquapro">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#003366">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self'; frame-ancestors 'none';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
     <link rel="canonical" href="https://morrisngugi.github.io/BlueWave-Aquapro/">
 
     <!-- Open Graph / Facebook -->
@@ -31,13 +37,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
+    <!-- Preconnect to CDN for faster resource loading -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Bootstrap Icons -->
+    <!-- Bootstrap Icons with font-display swap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    <!-- Custom CSS -->
+    <!-- Custom CSS with preload -->
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Structured Data (JSON-LD) -->
@@ -106,7 +117,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
     <div class="container">
         <a class="navbar-brand fw-bold py-0" href="index.html">
-            <img src="images/Logo.jpeg" alt="BlueWave Aquapro Logo" style="height: 90px; width: 280px; object-fit: contain;">
+            <img src="images/Logo.jpeg" alt="BlueWave Aquapro Logo" style="height: 90px; width: 280px; object-fit: contain;" loading="eager" decoding="async">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -132,7 +143,7 @@
 </nav>
 
 <!-- Image Slider/Carousel -->
-<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" role="region" aria-label="Featured Services Carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -147,7 +158,7 @@
                 <div class="container h-100">
                     <div class="row h-100 align-items-center justify-content-center">
                         <div class="col-lg-8 text-white text-center">
-                            <h2 class="display-4 fw-bold mb-3">Professional Sofa Cleaning</h2>
+                            <div class="h2 display-4 fw-bold mb-3">Professional Sofa Cleaning</div>
                             <p class="lead mb-4">Deep vacuum cleaning that removes dirt, dust mites, and allergens from your upholstery</p>
                             <a href="services.html" class="btn btn-warning btn-lg"><i class="bi bi-arrow-right me-2"></i>Explore Services</a>
                         </div>
@@ -160,7 +171,7 @@
                 <div class="container h-100">
                     <div class="row h-100 align-items-center justify-content-center">
                         <div class="col-lg-8 text-white text-center">
-                            <h2 class="display-4 fw-bold mb-3">Carpet & Mattress Care</h2>
+                            <div class="h2 display-4 fw-bold mb-3">Carpet & Mattress Care</div>
                             <p class="lead mb-4">Restore freshness and extend the life of your carpets and mattresses with our expert cleaning</p>
                             <a href="contact.html" class="btn btn-warning btn-lg"><i class="bi bi-calendar-check me-2"></i>Book Now</a>
                         </div>
@@ -173,7 +184,7 @@
                 <div class="container h-100">
                     <div class="row h-100 align-items-center justify-content-center">
                         <div class="col-lg-8 text-white text-center">
-                            <h2 class="display-4 fw-bold mb-3">Car Interior Detailing</h2>
+                            <div class="h2 display-4 fw-bold mb-3">Car Interior Detailing</div>
                             <p class="lead mb-4">Complete vacuum cleaning service for your vehicle's interior - seats, carpets, and upholstery</p>
                             <a href="tel:0757438333" class="btn btn-warning btn-lg"><i class="bi bi-telephone me-2"></i>Call Us Now</a>
                         </div>
@@ -186,7 +197,7 @@
                 <div class="container h-100">
                     <div class="row h-100 align-items-center justify-content-center">
                         <div class="col-lg-8 text-white text-center">
-                            <h2 class="display-4 fw-bold mb-3">Office & Commercial Spaces</h2>
+                            <div class="h2 display-4 fw-bold mb-3">Office & Commercial Spaces</div>
                             <p class="lead mb-4">Professional cleaning solutions for offices, shops, and commercial establishments</p>
                             <a href="services.html" class="btn btn-warning btn-lg"><i class="bi bi-briefcase me-2"></i>View All Services</a>
                         </div>
@@ -199,7 +210,7 @@
                 <div class="container h-100">
                     <div class="row h-100 align-items-center justify-content-center">
                         <div class="col-lg-8 text-white text-center">
-                            <h2 class="display-4 fw-bold mb-3">Complete Home Cleaning</h2>
+                            <div class="h2 display-4 fw-bold mb-3">Complete Home Cleaning</div>
                             <p class="lead mb-4">Deep cleaning for your entire home - bedrooms, living areas, kitchen, and bathrooms</p>
                             <a href="contact.html" class="btn btn-warning btn-lg"><i class="bi bi-house me-2"></i>Book Home Service</a>
                         </div>
@@ -212,7 +223,7 @@
                 <div class="container h-100">
                     <div class="row h-100 align-items-center justify-content-center">
                         <div class="col-lg-8 text-white text-center">
-                            <h2 class="display-4 fw-bold mb-3">Curtain & Drape Cleaning</h2>
+                            <div class="h2 display-4 fw-bold mb-3">Curtain & Drape Cleaning</div>
                             <p class="lead mb-4">Specialized cleaning for curtains, drapes, and window treatments to restore their beauty</p>
                             <a href="contact.html" class="btn btn-warning btn-lg"><i class="bi bi-stars me-2"></i>Get Started</a>
                         </div>
@@ -231,6 +242,8 @@
     </button>
 </div>
 
+<!-- Main Content -->
+<main>
 <!-- Hero Section -->
 <header class="hero-section d-flex align-items-center">
     <div class="container">
@@ -250,15 +263,18 @@
             <div class="col-lg-6">
                 <div class="hero-card bg-white bg-opacity-90 p-4 rounded-3 shadow-lg">
                     <h3 class="text-dark mb-3">Quick Quote</h3>
-                    <form>
+                    <form aria-label="Quick Quote Request Form">
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                            <label for="quoteName" class="visually-hidden">Your Name</label>
+                            <input type="text" id="quoteName" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="mb-3">
-                            <input type="tel" class="form-control" placeholder="Phone Number" required>
+                            <label for="quotePhone" class="visually-hidden">Phone Number</label>
+                            <input type="tel" id="quotePhone" class="form-control" placeholder="Phone Number" required>
                         </div>
                         <div class="mb-3">
-                            <select class="form-select" required>
+                            <label for="quoteService" class="visually-hidden">Service Needed</label>
+                            <select id="quoteService" class="form-select" required>
                                 <option value="">Service Needed</option>
                                 <option value="sofa">Sofa Deep Cleaning</option>
                                 <option value="carpet">Carpet Cleaning</option>
@@ -364,7 +380,7 @@
                     </div>
                     <p class="mb-3">"Excellent service! My sofa and carpets look brand new. The team was professional and the results were fantastic."</p>
                     <div class="d-flex align-items-center">
-                        <img src="images/Morris.jpg" alt="Morris Ngugi" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                        <img src="images/Morris.jpg" alt="Morris Ngugi" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;" loading="lazy" decoding="async">
                         <div>
                             <h6 class="mb-0 fw-bold">Morris Ngugi</h6>
                             <small class="text-muted">Verified Customer</small>
@@ -383,7 +399,7 @@
                     </div>
                     <p class="mb-3">"They came to my location and did an amazing job on my car interior. Professional deep cleaning service. Highly recommended!"</p>
                     <div class="d-flex align-items-center">
-                        <img src="images/customer 1.jpg" alt="Rita Gaceri Mugendi" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                        <img src="images/customer 1.jpg" alt="Rita Gaceri Mugendi" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;" loading="lazy" decoding="async">
                         <div>
                             <h6 class="mb-0 fw-bold">Mugendi Mucunku George</h6>
                             <small class="text-muted">Business Professional</small>
@@ -402,7 +418,7 @@
                     </div>
                     <p class="mb-3">"Amazing attention to detail and eco-friendly practices. My clothes always come back perfectly clean and fresh."</p>
                     <div class="d-flex align-items-center">
-                        <img src="images/Stella Keeru.jpg" alt="Stella Keeru" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                        <img src="images/Stella Keeru.jpg" alt="Stella Keeru" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;" loading="lazy" decoding="async">
                         <div>
                             <h6 class="mb-0 fw-bold">Stella Keeru</h6>
                             <small class="text-muted">Regular Customer</small>
@@ -429,9 +445,10 @@
         </div>
     </div>
 </section>
+</main>
 
 <!-- Footer -->
-<footer class="py-5" style="background-color: #003366; color: #ffffff;">
+<footer class="py-5" style="background-color: #003366; color: #ffffff;" role="contentinfo">
     <div class="container">
         <div class="row">
             <div class="col-md-4 mb-4">
@@ -443,7 +460,7 @@
                     <a href="https://www.facebook.com/djngugimorry" target="_blank" class="me-3" style="color: #00BFFF;"><i class="bi bi-facebook fs-5"></i></a>
                     <a href="https://www.instagram.com/morris_ngugi/" target="_blank" class="me-3" style="color: #00BFFF;"><i class="bi bi-instagram fs-5"></i></a>
                     <a href="https://x.com/ngugimorry" target="_blank" class="me-3" style="color: #00BFFF;"><i class="bi bi-twitter fs-5"></i></a>
-                    <a href="#" style="color: #00BFFF;"><i class="bi bi-google fs-5"></i></a>
+                    <a href="https://www.google.com/search?q=BlueWave+Aquapro" target="_blank" aria-label="Find us on Google" style="color: #00BFFF;"><i class="bi bi-google fs-5"></i></a>
                 </div>
             </div>
             <div class="col-md-2 mb-4">
@@ -493,7 +510,7 @@
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

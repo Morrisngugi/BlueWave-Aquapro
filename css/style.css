@@ -1,5 +1,13 @@
 /* Custom Styles for BlueWave Aquapro */
 
+/* Font Display Optimization */
+@font-face {
+    font-family: 'bootstrap-icons';
+    src: url('../fonts/bootstrap-icons.woff2') format('woff2'),
+         url('../fonts/bootstrap-icons.woff') format('woff');
+    font-display: swap;
+}
+
 /* Brand Colors */
 :root {
     --primary-cyan: #00BFFF;
@@ -14,6 +22,20 @@ body {
     padding-top: 100px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    font-display: swap;
+}
+
+/* Improve contrast for accessibility */
+.text-muted {
+    color: #5a5a5a !important;
+}
+
+.bg-light .text-muted {
+    color: #4a4a4a !important;
+}
+
+small.text-muted {
+    color: #666666 !important;
 }
 
 /* Navigation */
@@ -141,7 +163,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("../images/hero.jpg") center/cover no-repeat;
+    background: linear-gradient(135deg, #003366 0%, #00BFFF 100%);
     opacity: 0.1;
     z-index: -1;
 }
