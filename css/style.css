@@ -50,6 +50,43 @@ body {
     color: var(--primary-cyan) !important;
 }
 
+/* Hero Carousel */
+.carousel-item {
+    transition: transform 0.8s ease-in-out;
+}
+
+.carousel-img {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-indicators {
+    bottom: 20px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.carousel-indicators button:hover {
+    transform: scale(1.2);
+}
+
 .btn-outline-warning:hover {
     background-color: var(--primary-cyan) !important;
     border-color: var(--primary-cyan) !important;
@@ -375,6 +412,24 @@ body {
 
 /* Tablet adjustments (768px - 991px) */
 @media (max-width: 991px) {
+    /* Carousel adjustments for tablets */
+    .carousel-img {
+        height: 450px !important;
+    }
+    
+    .carousel-item h2 {
+        font-size: 2.25rem !important;
+    }
+    
+    .carousel-item .lead {
+        font-size: 1.1rem !important;
+    }
+    
+    .carousel-item .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
     /* Center align elements for better readability */
     .page-header .col-lg-8,
     .page-header .col-lg-4 {
@@ -401,6 +456,23 @@ body {
 @media (max-width: 576px) {
     body {
         padding-top: 70px;
+    }
+    
+    /* Carousel adjustments for mobile */
+    #heroCarousel {
+        margin-top: 0 !important;
+    }
+    
+    .carousel-img {
+        height: 400px !important;
+    }
+    
+    .carousel-item h2 {
+        font-size: 1.75rem !important;
+    }
+    
+    .carousel-item .lead {
+        font-size: 1rem !important;
     }
     
     /* Push logo to the left on mobile with small margin */
