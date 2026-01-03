@@ -405,8 +405,13 @@ body {
     
     /* Increase page header padding for better visibility on small screens */
     .page-header {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+    
+    /* Remove centering from page-header first row on small devices */
+    .page-header .text-center {
+        text-align: left !important;
     }
     
     .hero-section {
