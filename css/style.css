@@ -403,10 +403,20 @@ body {
         padding-top: 70px;
     }
     
+    /* Push logo to the left on mobile with small margin */
+    .navbar-brand {
+        margin-left: 0.5rem;
+        padding-left: 0;
+    }
+    
+    .navbar .container {
+        padding-left: 0;
+    }
+    
     /* Increase page header padding for better visibility on small screens */
     .page-header {
-        padding-top: 5rem !important;
-        padding-bottom: 5rem !important;
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
     }
     
     /* Remove centering from page-header first row on small devices */
