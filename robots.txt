@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://morrisngugi.github.io/BlueWave-Aquapro/sitemap.xml
