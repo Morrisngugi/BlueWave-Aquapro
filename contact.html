@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | BlueWave Aquapro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact FreshPress Dry Cleaners for professional cleaning services. Schedule pickup, request quotes, or visit our convenient location. Same-day service available.">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+            <img src="images/Logo.jpeg" alt="BlueWave Aquapro Logo" style="height: 40px; margin-right: 10px;">
+            <span>BlueWave Aquapro</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-outline-warning ms-2 px-3" href="contact.html">Get Quote</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Contact Us</h1>
+                <p class="lead">Get in touch for professional cleaning services, quotes, or pickup scheduling</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="tel:555-0123" class="btn btn-warning btn-lg">
+                    <i class="bi bi-telephone me-2"></i>Call Now
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Contact -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="contact-card bg-white p-4 rounded-3 shadow-sm text-center h-100">
+                    <div class="contact-icon text-primary mb-3">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+                    <h5 class="fw-bold">Call Us</h5>
+                    <p class="mb-3"><a href="tel:555-0123" class="text-decoration-none">(555) 123-0000</a></p>
+                    <p class="text-muted small">Mon-Fri: 7AM-7PM<br>Sat: 8AM-6PM<br>Sun: 9AM-4PM</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="contact-card bg-white p-4 rounded-3 shadow-sm text-center h-100">
+                    <div class="contact-icon text-success mb-3">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <h5 class="fw-bold">Visit Us</h5>
+                    <p class="mb-3">123 Main Street<br>Anytown, ST 12345</p>
+                    <a href="#map" class="btn btn-outline-success btn-sm">View Map</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="contact-card bg-white p-4 rounded-3 shadow-sm text-center h-100">
+                    <div class="contact-icon text-warning mb-3">
+                        <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <h5 class="fw-bold">Email Us</h5>
+                    <p class="mb-3"><a href="mailto:info@freshpress.com" class="text-decoration-none">info@freshpress.com</a></p>
+                    <p class="text-muted small">We respond within 24 hours</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="contact-card bg-white p-4 rounded-3 shadow-sm text-center h-100">
+                    <div class="contact-icon text-info mb-3">
+                        <i class="bi bi-truck"></i>
+                    </div>
+                    <h5 class="fw-bold">Schedule Pickup</h5>
+                    <p class="mb-3">Free pickup & delivery</p>
+                    <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#pickupModal">Schedule Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Forms -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="bg-white p-5 rounded-3 shadow-sm">
+                    <h2 class="display-6 fw-bold mb-4">Get a Free Quote</h2>
+                    <form id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="service" class="form-label">Service Needed *</label>
+                                <select class="form-select" id="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="dry-cleaning">Dry Cleaning</option>
+                                    <option value="laundry">Laundry Service</option>
+                                    <option value="suits">Suit Care</option>
+                                    <option value="wedding">Wedding Dress Preservation</option>
+                                    <option value="leather">Leather & Suede</option>
+                                    <option value="pickup">Pickup & Delivery</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="preferredDate" class="form-label">Preferred Date</label>
+                                <input type="date" class="form-control" id="preferredDate">
+                            </div>
+                            <div class="col-12">
+                                <label for="address" class="form-label">Address (for pickup/delivery)</label>
+                                <input type="text" class="form-control" id="address" placeholder="Street address, City, State, ZIP">
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Tell us about your specific needs, stains, or special requests..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to our newsletter for special offers and cleaning tips
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="bi bi-send me-2"></i>Send Message
+                                </button>
+                                <p class="text-muted small mt-2">* Required fields. We'll respond within 24 hours.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Quick Info -->
+            <div class="col-lg-4">
+                <div class="sticky-top" style="top: 120px;">
+                    <!-- Special Offers -->
+                    <div class="bg-warning bg-opacity-10 p-4 rounded-3 mb-4">
+                        <h4 class="fw-bold mb-3">
+                            <i class="bi bi-gift-fill text-warning me-2"></i>Current Offers
+                        </h4>
+                        <div class="mb-3">
+                            <h6 class="fw-bold">20% Off First Order</h6>
+                            <p class="text-muted small mb-2">New customers save 20% on orders over $25</p>
+                            <span class="badge bg-warning text-dark">Code: WELCOME20</span>
+                        </div>
+                        <hr>
+                        <div>
+                            <h6 class="fw-bold">Free Pickup & Delivery</h6>
+                            <p class="text-muted small mb-0">On orders over $35 within 10 miles</p>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="bg-light p-4 rounded-3 mb-4">
+                        <h5 class="fw-bold mb-3">
+                            <i class="bi bi-clock me-2"></i>Business Hours
+                        </h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Monday - Friday</span>
+                                <span class="fw-bold">7:00 AM - 7:00 PM</span>
+                            </li>
+                            <li class="d-flex justify-content-between mb-2">
+                                <span>Saturday</span>
+                                <span class="fw-bold">8:00 AM - 6:00 PM</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>Sunday</span>
+                                <span class="fw-bold">9:00 AM - 4:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Emergency Contact -->
+                    <div class="bg-danger bg-opacity-10 p-4 rounded-3">
+                        <h5 class="fw-bold mb-3 text-danger">
+                            <i class="bi bi-exclamation-triangle me-2"></i>Emergency Service
+                        </h5>
+                        <p class="small mb-2">Need same-day or after-hours service?</p>
+                        <a href="tel:555-0199" class="btn btn-danger btn-sm">
+                            <i class="bi bi-telephone me-2"></i>Emergency Line
+                        </a>
+                        <p class="text-muted small mt-2 mb-0">Additional charges may apply for emergency services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section id="map" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">Find Our Location</h2>
+            <p class="lead text-muted">Conveniently located in the heart of downtown</p>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <!-- Placeholder for map -->
+                <div class="map-placeholder bg-primary bg-opacity-10 rounded-3 p-5 text-center" style="height: 400px;">
+                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                        <i class="bi bi-geo-alt-fill text-primary fs-1 mb-3"></i>
+                        <h4 class="fw-bold">Interactive Map</h4>
+                        <p class="text-muted">123 Main Street, Anytown, ST 12345</p>
+                        <a href="https://maps.google.com/?q=123+Main+Street+Anytown+ST" target="_blank" class="btn btn-primary">
+                            <i class="bi bi-arrow-up-right-square me-2"></i>Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="bg-white p-4 rounded-3 shadow-sm">
+                    <h5 class="fw-bold mb-3">Location Details</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="bi bi-geo-alt text-primary me-2"></i>
+                            <strong>Address:</strong><br>
+                            123 Main Street<br>
+                            Anytown, ST 12345
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-car-front text-success me-2"></i>
+                            <strong>Parking:</strong><br>
+                            Free parking available in front and rear
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-bus-front text-info me-2"></i>
+                            <strong>Public Transit:</strong><br>
+                            Bus routes 15, 22, 45<br>
+                            Stop: Main St & 2nd Ave
+                        </li>
+                        <li>
+                            <i class="bi bi-universal-access text-warning me-2"></i>
+                            <strong>Accessibility:</strong><br>
+                            Wheelchair accessible entrance
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">Frequently Asked Questions</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                How quickly can you clean my clothes?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our standard turnaround time is 24-48 hours. We also offer same-day service for items dropped off before 9 AM (additional charges apply). Express 2-hour service is available for urgent needs.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Do you offer pickup and delivery?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! We offer convenient pickup and delivery service within a 10-mile radius. Pickup is free on orders over $35, or $4.99 for smaller orders. You can schedule online or by calling us.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                What if you can't remove a stain?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We use advanced stain removal techniques and will always attempt treatment. If we cannot remove a stain, we'll contact you before proceeding and won't charge for the unsuccessful stain removal attempt.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                Are your cleaning methods eco-friendly?
+                            </button>
+                        </h3>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely! We use non-toxic, biodegradable solvents and environmentally responsible processes. We're certified by the EPA's Green Business Program and committed to protecting both your clothes and our planet.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                Do you handle wedding dresses and formal wear?
+                            </button>
+                        </h3>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! We specialize in wedding dress cleaning and preservation. Our museum-quality preservation service includes acid-free storage boxes and comes with a 100-year guarantee. We also handle all types of formal wear with expert care.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pickup Modal -->
+<div class="modal fade" id="pickupModal" tabindex="-1" aria-labelledby="pickupModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="pickupModalLabel">
+                    <i class="bi bi-truck me-2"></i>Schedule Pickup & Delivery
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="pickupForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="pickupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="pickupName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="pickupPhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="pickupPhone" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="pickupAddress" class="form-label">Pickup Address</label>
+                            <textarea class="form-control" id="pickupAddress" rows="2" placeholder="Full address including apartment/unit number" required></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="pickupDate" class="form-label">Pickup Date</label>
+                            <input type="date" class="form-control" id="pickupDate" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="pickupTime" class="form-label">Preferred Time</label>
+                            <select class="form-select" id="pickupTime" required>
+                                <option value="">Select time</option>
+                                <option value="morning">Morning (8-12 PM)</option>
+                                <option value="afternoon">Afternoon (12-5 PM)</option>
+                                <option value="evening">Evening (5-7 PM)</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="pickupInstructions" class="form-label">Special Instructions</label>
+                            <textarea class="form-control" id="pickupInstructions" rows="2" placeholder="Delivery instructions, gate codes, etc."></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Schedule Pickup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold mb-3">
+                    <i class="bi bi-star-fill text-warning me-2"></i>FreshPress
+                </h5>
+                <p class="text-muted">Premium dry cleaning services with a commitment to quality, convenience, and environmental responsibility.</p>
+                <div class="social-links">
+                    <a href="#" class="text-warning me-3"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#" class="text-warning me-3"><i class="bi bi-instagram fs-5"></i></a>
+                    <a href="#" class="text-warning me-3"><i class="bi bi-twitter fs-5"></i></a>
+                    <a href="#" class="text-warning"><i class="bi bi-google fs-5"></i></a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-4">
+                <h6 class="fw-bold mb-3">Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+                    <li><a href="services.html" class="text-muted text-decoration-none">Services</a></li>
+                    <li><a href="about.html" class="text-muted text-decoration-none">About Us</a></li>
+                    <li><a href="contact.html" class="text-muted text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold mb-3">Services</h6>
+                <ul class="list-unstyled">
+                    <li class="text-muted">Dry Cleaning</li>
+                    <li class="text-muted">Laundry Service</li>
+                    <li class="text-muted">Suit Care</li>
+                    <li class="text-muted">Wedding Dresses</li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold mb-3">Contact Info</h6>
+                <ul class="list-unstyled">
+                    <li class="text-muted"><i class="bi bi-geo-alt me-2"></i>123 Main Street, Anytown, ST 12345</li>
+                    <li class="text-muted"><i class="bi bi-telephone me-2"></i>(555) 123-0000</li>
+                    <li class="text-muted"><i class="bi bi-envelope me-2"></i>info@freshpress.com</li>
+                    <li class="text-muted"><i class="bi bi-clock me-2"></i>Mon-Fri: 7AM-7PM, Sat: 8AM-6PM</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="mb-0 text-muted">&copy; 2026 FreshPress Dry Cleaners. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+                <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
