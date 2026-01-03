@@ -378,6 +378,12 @@ body {
         padding-top: 70px;
     }
     
+    /* Increase page header padding for better visibility on small screens */
+    .page-header {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
     .hero-section {
         min-height: 60vh;
         padding: 3rem 0;
