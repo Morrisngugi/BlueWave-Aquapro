@@ -60,27 +60,53 @@
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row g-4">
-            <div class="col-lg-3 col-md-6">
-                <div class="contact-card bg-white p-4 rounded-3 shadow-sm text-center h-100">
-                    <div class="contact-icon text-primary mb-3">
-                        <i class="bi bi-telephone-fill"></i>
+            <div class="col-lg-6 col-md-6">
+                <div class="contact-card bg-white p-4 rounded-3 shadow-sm h-100">
+                    <div class="text-center mb-3">
+                        <div class="contact-icon text-primary mb-3">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5 class="fw-bold">Meru Branch</h5>
                     </div>
-                    <h5 class="fw-bold">Call Us</h5>
-                    <p class="mb-3"><a href="tel:0757438333" class="text-decoration-none">0757 438333</a></p>
-                    <p class="text-muted small">Mon-Fri: 7AM-7PM<br>Sat: 8AM-6PM<br>Sun: 9AM-4PM</p>
+                    <div class="mb-3">
+                        <p class="mb-2"><i class="bi bi-geo-alt me-2 text-primary"></i><strong>Location:</strong></p>
+                        <p class="text-muted ms-4">Meru Makutano near Mafuko</p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="mb-2"><i class="bi bi-telephone me-2 text-primary"></i><strong>Phone:</strong></p>
+                        <p class="ms-4"><a href="tel:0757438333" class="text-decoration-none">0757 438333</a></p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="mb-2"><i class="bi bi-clock me-2 text-primary"></i><strong>Hours:</strong></p>
+                        <p class="text-muted ms-4 mb-0">Mon-Fri: 7AM-7PM<br>Sat: 8AM-6PM<br>Sun: 9AM-4PM</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="contact-card bg-white p-4 rounded-3 shadow-sm text-center h-100">
-                    <div class="contact-icon text-success mb-3">
-                        <i class="bi bi-geo-alt-fill"></i>
+            <div class="col-lg-6 col-md-6">
+                <div class="contact-card bg-white p-4 rounded-3 shadow-sm h-100">
+                    <div class="text-center mb-3">
+                        <div class="contact-icon text-success mb-3">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5 class="fw-bold">Chuka Branch</h5>
                     </div>
-                    <h5 class="fw-bold">Visit Us</h5>
-                    <p class="mb-3">Meru Town<br>Kenya</p>
-                    <a href="#map" class="btn btn-outline-success btn-sm">View Map</a>
+                    <div class="mb-3">
+                        <p class="mb-2"><i class="bi bi-geo-alt me-2 text-success"></i><strong>Location:</strong></p>
+                        <p class="text-muted ms-4">Chuka Town</p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="mb-2"><i class="bi bi-telephone me-2 text-success"></i><strong>Phone:</strong></p>
+                        <p class="ms-4"><a href="tel:0711691794" class="text-decoration-none">0711 691794</a></p>
+                    </div>
+                    <div class="mb-3">
+                        <p class="mb-2"><i class="bi bi-clock me-2 text-success"></i><strong>Hours:</strong></p>
+                        <p class="text-muted ms-4 mb-0">Mon-Fri: 7AM-7PM<br>Sat: 8AM-6PM<br>Sun: 9AM-4PM</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+        </div>
+        <div class="row g-4 mt-2">
+            <div class="col-lg-6 col-md-6">
                 <div class="contact-card bg-white p-4 rounded-3 shadow-sm text-center h-100">
                     <div class="contact-icon text-warning mb-3">
                         <i class="bi bi-envelope-fill"></i>
@@ -90,13 +116,13 @@
                     <p class="text-muted small">We respond within 24 hours</p>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-6 col-md-6">
                 <div class="contact-card bg-white p-4 rounded-3 shadow-sm text-center h-100">
                     <div class="contact-icon text-info mb-3">
                         <i class="bi bi-truck"></i>
                     </div>
                     <h5 class="fw-bold">Schedule Pickup</h5>
-                    <p class="mb-3">Free pickup & delivery</p>
+                    <p class="mb-3">Free pickup & delivery in Meru and Chuka</p>
                     <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#pickupModal">Schedule Now</button>
                 </div>
             </div>
@@ -236,48 +262,98 @@
 <section id="map" class="py-5 bg-light">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-6 fw-bold">Find Our Location</h2>
-            <p class="lead text-muted">Conveniently located in the heart of downtown</p>
+            <h2 class="display-6 fw-bold">Find Our Locations</h2>
+            <p class="lead text-muted">We serve both Meru and Chuka areas</p>
         </div>
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <!-- Placeholder for map -->
-                <div class="map-placeholder bg-primary bg-opacity-10 rounded-3 p-5 text-center" style="height: 400px;">
-                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
-                        <i class="bi bi-geo-alt-fill text-primary fs-1 mb-3"></i>
-                        <h4 class="fw-bold">Interactive Map</h4>
-                        <p class="text-muted">Meru Town, Kenya</p>
-                        <a href="https://maps.google.com/?q=Meru+Town+Kenya" target="_blank" class="btn btn-primary">
-                            <i class="bi bi-arrow-up-right-square me-2"></i>Open in Google Maps
-                        </a>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                    <h5 class="fw-bold mb-4 text-primary">
+                        <i class="bi bi-geo-alt-fill me-2"></i>Meru Branch
+                    </h5>
+                    <div class="map-placeholder bg-primary bg-opacity-10 rounded-3 p-4 text-center mb-3" style="height: 250px;">
+                        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                            <i class="bi bi-geo-alt-fill text-primary fs-1 mb-3"></i>
+                            <h6 class="fw-bold">Meru Makutano</h6>
+                            <p class="text-muted small">Near Mafuko</p>
+                            <a href="https://maps.google.com/?q=Meru+Makutano+Kenya" target="_blank" class="btn btn-primary btn-sm">
+                                <i class="bi bi-arrow-up-right-square me-2"></i>Open in Google Maps
+                            </a>
+                        </div>
                     </div>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-telephone text-primary me-2"></i>
+                            <strong>Phone:</strong> <a href="tel:0757438333">0757 438333</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-car-front text-primary me-2"></i>
+                            <strong>Parking:</strong> Ample parking available
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-universal-access text-primary me-2"></i>
+                            <strong>Service Area:</strong> Meru and surrounding areas
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
+                <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                    <h5 class="fw-bold mb-4 text-success">
+                        <i class="bi bi-geo-alt-fill me-2"></i>Chuka Branch
+                    </h5>
+                    <div class="map-placeholder bg-success bg-opacity-10 rounded-3 p-4 text-center mb-3" style="height: 250px;">
+                        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                            <i class="bi bi-geo-alt-fill text-success fs-1 mb-3"></i>
+                            <h6 class="fw-bold">Chuka Town</h6>
+                            <p class="text-muted small">Central Chuka</p>
+                            <a href="https://maps.google.com/?q=Chuka+Town+Kenya" target="_blank" class="btn btn-success btn-sm">
+                                <i class="bi bi-arrow-up-right-square me-2"></i>Open in Google Maps
+                            </a>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-telephone text-success me-2"></i>
+                            <strong>Phone:</strong> <a href="tel:0711691794">0711 691794</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-car-front text-success me-2"></i>
+                            <strong>Parking:</strong> Ample parking available
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-universal-access text-success me-2"></i>
+                            <strong>Service Area:</strong> Chuka and surrounding areas
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Info Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
                 <div class="bg-white p-4 rounded-3 shadow-sm">
-                    <h5 class="fw-bold mb-3">Location Details</h5>
+                    <h5 class="fw-bold mb-3">Additional Information</h5>
                     <ul class="list-unstyled">
                         <li class="mb-3">
-                            <i class="bi bi-geo-alt text-primary me-2"></i>
-                            <strong>Address:</strong><br>
-                            Meru Town<br>
-                            Kenya
+                            <i class="bi bi-bus-front text-info me-2"></i>
+                            <strong>Public Transit:</strong><br>
+                            <span class="text-muted">Accessible via matatus from town centers and main bus stations</span>
                         </li>
                         <li class="mb-3">
                             <i class="bi bi-car-front text-success me-2"></i>
                             <strong>Parking:</strong><br>
-                            Ample parking space available
-                        </li>
-                        <li class="mb-3">
-                            <i class="bi bi-bus-front text-info me-2"></i>
-                            <strong>Public Transit:</strong><br>
-                            Accessible via matatus from Meru town center<br>
-                            Near main Meru bus station
+                            <span class="text-muted">Ample parking space available at both branches</span>
                         </li>
                         <li>
                             <i class="bi bi-universal-access text-warning me-2"></i>
                             <strong>Service Area:</strong><br>
-                            Serving Meru Town and surrounding areas
+                            <span class="text-muted">Serving Meru, Chuka and surrounding areas</span>
                         </li>
                     </ul>
                 </div>
@@ -454,12 +530,18 @@
             </div>
             <div class="col-md-3 mb-4">
                 <h6 class="fw-bold mb-3" style="color: #00BFFF;">Contact Info</h6>
+                <p class="mb-2" style="color: #e0e0e0;"><strong>Meru Branch:</strong></p>
                 <ul class="list-unstyled">
-                    <li class="mb-2" style="color: #e0e0e0;"><i class="bi bi-geo-alt me-2" style="color: #00BFFF;"></i>Meru Town, Kenya</li>
+                    <li class="mb-2" style="color: #e0e0e0;"><i class="bi bi-geo-alt me-2" style="color: #00BFFF;"></i>Meru Makutano, near Mafuko</li>
                     <li class="mb-2" style="color: #e0e0e0;"><i class="bi bi-telephone me-2" style="color: #00BFFF;"></i>0757 438333</li>
-                    <li class="mb-2" style="color: #e0e0e0;"><i class="bi bi-envelope me-2" style="color: #00BFFF;"></i>info@bluewaveaquapro.com</li>
-                    <li class="mb-2" style="color: #e0e0e0;"><i class="bi bi-clock me-2" style="color: #00BFFF;"></i>Mon-Fri: 7AM-7PM, Sat: 8AM-6PM</li>
                 </ul>
+                <p class="mb-2 mt-3" style="color: #e0e0e0;"><strong>Chuka Branch:</strong></p>
+                <ul class="list-unstyled">
+                    <li class="mb-2" style="color: #e0e0e0;"><i class="bi bi-geo-alt me-2" style="color: #00BFFF;"></i>Chuka Town</li>
+                    <li class="mb-2" style="color: #e0e0e0;"><i class="bi bi-telephone me-2" style="color: #00BFFF;"></i>0711 691794</li>
+                </ul>
+                <p class="mb-2 mt-3" style="color: #e0e0e0;"><i class="bi bi-envelope me-2" style="color: #00BFFF;"></i>info@bluewaveaquapro.com</p>
+                <p class="mb-2" style="color: #e0e0e0;"><i class="bi bi-clock me-2" style="color: #00BFFF;"></i>Mon-Fri: 7AM-7PM, Sat: 8AM-6PM</p>
             </div>
         </div>
         <hr class="my-4" style="border-color: #00BFFF; opacity: 0.5;">
