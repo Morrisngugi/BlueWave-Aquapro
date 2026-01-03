@@ -5,12 +5,59 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize all components
     initializeNavbar();
+    initializeCarousel();
     initializeForms();
     initializeAnimations();
     initializeModals();
     initializeTooltips();
     initializeCounters();
 });
+
+// Carousel initialization for cross-browser compatibility
+function initializeCarousel() {
+    const carouselElement = document.getElementById('heroCarousel');
+    
+    if (carouselElement) {
+        // Initialize Bootstrap carousel with explicit options
+        const carousel = new bootstrap.Carousel(carouselElement, {
+            interval: 5000,
+            ride: 'carousel',
+            pause: 'hover',
+            wrap: true,
+            touch: true,
+            keyboard: true
+        });
+        
+        // Ensure carousel starts on page load
+        carousel.cycle();
+        
+        // Add touch support for mobile devices
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carouselElement.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        carouselElement.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                // Swipe left - next slide
+                carousel.next();
+            }
+            if (touchEndX > touchStartX + 50) {
+                // Swipe right - previous slide
+                carousel.prev();
+            }
+        }
+        
+        console.log('Carousel initialized successfully');
+    }
+}
 
 // Navbar functionality
 function initializeNavbar() {

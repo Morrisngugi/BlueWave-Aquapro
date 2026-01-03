@@ -52,19 +52,38 @@ body {
 
 /* Hero Carousel */
 .carousel-item {
+    -webkit-transition: -webkit-transform 0.8s ease-in-out;
+    -moz-transition: -moz-transform 0.8s ease-in-out;
+    -o-transition: -o-transform 0.8s ease-in-out;
     transition: transform 0.8s ease-in-out;
+}
+
+.carousel-inner {
+    overflow: hidden;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: block;
 }
 
 .carousel-img {
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-align-items: center;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
     width: 5%;
     opacity: 0.8;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
+    z-index: 10;
 }
 
 .carousel-control-prev:hover,
@@ -74,16 +93,24 @@ body {
 
 .carousel-indicators {
     bottom: 20px;
+    z-index: 15;
 }
 
 .carousel-indicators button {
     width: 12px;
     height: 12px;
     border-radius: 50%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
 .carousel-indicators button:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
     transform: scale(1.2);
 }
 
