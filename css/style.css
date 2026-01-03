@@ -184,6 +184,10 @@ small.text-muted {
     background-color: var(--primary-cyan) !important;
 }
 
+.bg-primary.text-white {
+    background: linear-gradient(135deg, #0099cc 0%, #003d66 100%) !important;
+}
+
 .text-primary {
     color: var(--primary-cyan) !important;
 }
@@ -385,6 +389,18 @@ small.text-muted {
     background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--navy-blue) 100%);
     transform: translateY(-1px);
     box-shadow: 0 0.25rem 0.5rem rgba(0, 191, 255, 0.3);
+}
+
+.btn-outline-light {
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+    border-width: 2px;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff !important;
+    color: var(--navy-blue) !important;
+    border-color: #ffffff !important;
 }
 
 /* Accordion */
