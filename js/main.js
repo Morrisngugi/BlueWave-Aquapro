@@ -426,3 +426,17 @@ console.log(`
 'color: #198754; font-size: 14px;',
 'color: #6c757d; font-size: 12px;'
 );
+
+// Quick track order function for homepage
+function quickTrackOrder() {
+    const orderID = document.getElementById('quickTrackOrderID').value.trim();
+    const phone = document.getElementById('quickTrackPhone').value.trim();
+    
+    if (!orderID || !phone) {
+        alert('Please enter both Order ID and phone number');
+        return;
+    }
+    
+    // Redirect to full tracking page with parameters
+    window.location.href = `track-order.html?orderID=${encodeURIComponent(orderID)}&phone=${encodeURIComponent(phone)}`;
+}

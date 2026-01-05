@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Track Your Order - BlueWave Aquapro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Track your cleaning service order status with BlueWave Aquapro. Enter your order ID to see real-time updates on your cleaning service progress.">
+    <meta name="keywords" content="track order, order status, cleaning service tracking, BlueWave Aquapro order, service status">
+    <meta name="author" content="BlueWave Aquapro">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#003366">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https:; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self'; frame-ancestors 'none';">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold py-0" href="index.html">
+            <img src="images/Logo.jpeg" alt="BlueWave Aquapro Logo" style="height: 90px; width: 280px; object-fit: contain;" loading="eager" decoding="async">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" href="track-order.html">Track Order</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link btn btn-outline-warning ms-2 px-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-telephone me-1"></i>Call Us
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="tel:0757438333"><i class="bi bi-telephone me-2"></i>Meru: 0757 438333</a></li>
+                        <li><a class="dropdown-item" href="tel:0711691794"><i class="bi bi-telephone me-2"></i>Chuka: 0711 691794</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-info ms-2 px-3" href="admin.html" title="Admin Login">
+                        <i class="bi bi-shield-lock me-1"></i>Admin
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main>
+    <!-- Page Header -->
+    <section class="page-header bg-primary text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="display-5 fw-bold mb-3">Track Your Order</h1>
+                    <p class="lead">Enter your order ID to check the status of your cleaning service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Tracking Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Track Order Form -->
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0"><i class="bi bi-search me-2"></i>Enter Order Details</h4>
+                        </div>
+                        <div class="card-body">
+                            <form id="trackOrderForm">
+                                <div class="row g-3">
+                                    <div class="col-md-8">
+                                        <label for="orderID" class="form-label">Order ID</label>
+                                        <input type="text" class="form-control form-control-lg" id="orderID" placeholder="Enter your order ID (e.g., BWA-2025-001)" required>
+                                        <div class="form-text">Order ID was provided when you booked the service</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control form-control-lg" id="phoneNumber" placeholder="07XXXXXXXX" required>
+                                        <div class="form-text">Last 4 digits for verification</div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5">
+                                        <i class="bi bi-search me-2"></i>Track Order
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Order Status Display (Initially Hidden) -->
+                    <div id="orderStatusCard" class="card shadow-lg border-0 d-none">
+                        <div class="card-header bg-success text-white">
+                            <h4 class="mb-0"><i class="bi bi-check-circle me-2"></i>Order Found</h4>
+                        </div>
+                        <div class="card-body">
+                            <!-- Order Information -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <h5 class="text-primary">Order Details</h5>
+                                    <p><strong>Order ID:</strong> <span id="displayOrderID"></span></p>
+                                    <p><strong>Customer:</strong> <span id="displayCustomerName"></span></p>
+                                    <p><strong>Phone:</strong> <span id="displayPhoneNumber"></span></p>
+                                    <p><strong>Service Date:</strong> <span id="displayServiceDate"></span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-primary">Service Information</h5>
+                                    <p><strong>Service Type:</strong> <span id="displayServiceType"></span></p>
+                                    <p><strong>Items:</strong> <span id="displayItems"></span></p>
+                                    <p><strong>Total Cost:</strong> <span id="displayCost"></span></p>
+                                </div>
+                            </div>
+
+                            <!-- Status Timeline -->
+                            <h5 class="text-primary mb-3">Order Progress</h5>
+                            <div class="timeline">
+                                <div class="timeline-item" id="status-scheduled">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h6>Service Scheduled</h6>
+                                        <p class="text-muted mb-1">Your cleaning service has been scheduled</p>
+                                        <small class="text-muted timestamp"></small>
+                                    </div>
+                                </div>
+                                <div class="timeline-item" id="status-pickup">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h6>Items Collected</h6>
+                                        <p class="text-muted mb-1">Our team has collected your items for cleaning</p>
+                                        <small class="text-muted timestamp"></small>
+                                    </div>
+                                </div>
+                                <div class="timeline-item" id="status-processing">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h6>Cleaning in Progress</h6>
+                                        <p class="text-muted mb-1">Your items are currently being cleaned</p>
+                                        <small class="text-muted timestamp"></small>
+                                    </div>
+                                </div>
+                                <div class="timeline-item" id="status-quality-check">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h6>Quality Check</h6>
+                                        <p class="text-muted mb-1">Final quality inspection completed</p>
+                                        <small class="text-muted timestamp"></small>
+                                    </div>
+                                </div>
+                                <div class="timeline-item" id="status-delivery">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h6>Ready for Delivery</h6>
+                                        <p class="text-muted mb-1">Items cleaned and ready for delivery/pickup</p>
+                                        <small class="text-muted timestamp"></small>
+                                    </div>
+                                </div>
+                                <div class="timeline-item" id="status-completed">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h6>Service Completed</h6>
+                                        <p class="text-muted mb-1">Items successfully delivered to customer</p>
+                                        <small class="text-muted timestamp"></small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Current Status Alert -->
+                            <div class="alert alert-info mt-4" id="currentStatusAlert">
+                                <h6 class="alert-heading">Current Status</h6>
+                                <p class="mb-0" id="currentStatusText"></p>
+                            </div>
+
+                            <!-- Estimated Delivery -->
+                            <div class="mt-3">
+                                <h6 class="text-primary">Estimated Completion:</h6>
+                                <p class="mb-0" id="estimatedCompletion"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Error Message (Initially Hidden) -->
+                    <div id="errorMessage" class="alert alert-danger d-none" role="alert">
+                        <h6 class="alert-heading">Order Not Found</h6>
+                        <p>We couldn't find an order with the provided details. Please check:</p>
+                        <ul>
+                            <li>Order ID is correct (format: BWA-YYYY-XXX)</li>
+                            <li>Phone number matches the one used for booking</li>
+                        </ul>
+                        <p class="mb-0">If you continue to have issues, please contact us at <a href="tel:0757438333">0757 438333</a> or <a href="tel:0711691794">0711 691794</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h4 class="mb-3">Need Help?</h4>
+                    <p>If you can't find your order or need assistance, don't hesitate to contact us.</p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <i class="bi bi-telephone-fill me-2 text-primary"></i>
+                                <div>
+                                    <strong>Phone Support</strong><br>
+                                    <a href="tel:0757438333" class="text-decoration-none">Meru: 0757 438333</a><br>
+                                    <a href="tel:0711691794" class="text-decoration-none">Chuka: 0711 691794</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <i class="bi bi-clock-fill me-2 text-primary"></i>
+                                <div>
+                                    <strong>Business Hours</strong><br>
+                                    Mon - Sat: 8:00 AM - 6:00 PM<br>
+                                    Sun: 9:00 AM - 4:00 PM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer (you can copy from other pages) -->
+<footer class="bg-dark text-light py-4">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <p>&copy; 2025 BlueWave Aquapro. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="js/main.js"></script>
+<script src="js/order-tracking.js"></script>
+
+</body>
+</html>
