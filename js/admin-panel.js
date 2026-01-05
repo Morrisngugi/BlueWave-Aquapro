@@ -63,7 +63,8 @@ function initializeEventListeners() {
     // Search and filters
     document.getElementById('searchOrders').addEventListener('input', filterOrders);
     document.getElementById('filterStatus').addEventListener('change', filterOrders);
-    document.getElementById('filterDate').addEventListener('change', filterOrders);
+    document.getElementById('startDate').addEventListener('change', filterOrders);
+    document.getElementById('endDate').addEventListener('change', filterOrders);
 }
 
 // Handle admin login
@@ -89,7 +90,7 @@ function handleLogin(e) {
 function logout() {
     isAuthenticated = false;
     sessionStorage.removeItem('adminAuthenticated');
-    location.reload();
+    window.location.href = 'index.html';
 }
 
 // Load dashboard statistics
@@ -373,7 +374,8 @@ function saveNewOrder() {
 function filterOrders() {
     const searchTerm = document.getElementById('searchOrders').value.toLowerCase();
     const statusFilter = document.getElementById('filterStatus').value;
-    const dateFilter = document.getElementById('filterDate').value;
+    const startDate = document.getElementById('startDate').value;
+    const endDate = document.getElementById('endDate').value;
     
     const rows = document.querySelectorAll('#ordersTableBody tr');
     
@@ -401,29 +403,30 @@ function filterOrders() {
             }
         }
         
-        // Apply date filter
-        if (dateFilter) {
+        // Apply date range filter
+        if (startDate || endDate) {
             const dateCell = cells[4]; // Service date column
-            const rowDate = new Date(dateCell.textContent);
-            const today = new Date();
-            
-            switch (dateFilter) {
-                case 'today':
-                    if (rowDate.toDateString() !== today.toDateString()) {
+            if (dateCell) {
+                // Extract date from the formatted text (assuming format like "Monday, January 6, 2025")
+                const dateText = dateCell.textContent;
+                const rowDate = new Date(dateText);
+                
+                // If we have a start date, check if row date is >= start date
+                if (startDate) {
+                    const filterStartDate = new Date(startDate);
+                    if (rowDate < filterStartDate) {
                         showRow = false;
                     }
-                    break;
-                case 'week':
-                    const weekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
-                    if (rowDate < weekAgo) {
+                }
+                
+                // If we have an end date, check if row date is <= end date
+                if (endDate) {
+                    const filterEndDate = new Date(endDate);
+                    filterEndDate.setHours(23, 59, 59, 999); // End of day
+                    if (rowDate > filterEndDate) {
                         showRow = false;
                     }
-                    break;
-                case 'month':
-                    if (rowDate.getMonth() !== today.getMonth() || rowDate.getFullYear() !== today.getFullYear()) {
-                        showRow = false;
-                    }
-                    break;
+                }
             }
         }
         
